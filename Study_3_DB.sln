@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study_3_DB", "Study_3_DB\Study_3_DB.csproj", "{44432A8E-7F8D-4411-A5E7-D6AAFD12D5F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelationModel", "RelationModel\RelationModel.csproj", "{0A666C8D-C058-4EEE-8CE8-35EF64A773CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonrealationModel", "NonrealationModel\NonrealationModel.csproj", "{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_RelationBD", "01_RelationBD", "{71DEFAB4-B113-49EF-8999-D885E1D90C7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +25,16 @@ Global
 		{0A666C8D-C058-4EEE-8CE8-35EF64A773CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A666C8D-C058-4EEE-8CE8-35EF64A773CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A666C8D-C058-4EEE-8CE8-35EF64A773CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A666C8D-C058-4EEE-8CE8-35EF64A773CA} = {71DEFAB4-B113-49EF-8999-D885E1D90C7B}
+		{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0} = {71DEFAB4-B113-49EF-8999-D885E1D90C7B}
 	EndGlobalSection
 EndGlobal
