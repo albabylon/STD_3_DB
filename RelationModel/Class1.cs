@@ -1,4 +1,4 @@
-﻿namespace Study_3_DB
+﻿namespace RelationModel
 {
     public class Class1
     {
