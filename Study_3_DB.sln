@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_RelationBD", "01_Relatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_SQL", "02_SQL", "{8CA09265-A72C-4950-A855-644CFF5B005D}"
 	ProjectSection(SolutionItems) = preProject
+		OperatorsAndFunctions.txt = OperatorsAndFunctions.txt
 		PostgresSQL_DBeaver.txt = PostgresSQL_DBeaver.txt
+		Query_Basis.txt = Query_Basis.txt
 	EndProjectSection
 EndProject
 Global
