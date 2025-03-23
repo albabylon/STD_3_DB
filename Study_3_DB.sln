@@ -14,8 +14,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_SQL", "02_SQL", "{8CA09265-A72C-4950-A855-644CFF5B005D}"
 	ProjectSection(SolutionItems) = preProject
 		OperatorsAndFunctions.txt = OperatorsAndFunctions.txt
+		JOIN_QueryFromSeveralTables.txt = JOIN_QueryFromSeveralTables.txt
+		JoinQueryResults.txt = JoinQueryResults.txt
 		PostgresSQL_DBeaver.txt = PostgresSQL_DBeaver.txt
 		Query_Basis.txt = Query_Basis.txt
+		SortAndAgregation.txt = SortAndAgregation.txt
 	EndProjectSection
 EndProject
 Global
