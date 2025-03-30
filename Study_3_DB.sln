@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_DML_DDL_Transaction_DBDe
 		DDL.txt = DDL.txt
 		DDL_DML_CRUD.txt = DDL_DML_CRUD.txt
 		DML.txt = DML.txt
+		NormalFormDB.txt = NormalFormDB.txt
+		Transaction.txt = Transaction.txt
 	EndProjectSection
 EndProject
 Global
