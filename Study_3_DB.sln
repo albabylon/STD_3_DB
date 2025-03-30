@@ -24,6 +24,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_DML_DDL_Transaction_DBDeveloping", "03_DML_DDL_Transaction_DBDeveloping", "{A5008903-C23B-4E5F-AD68-8C1327DE8161}"
 	ProjectSection(SolutionItems) = preProject
 		DataMetadata.txt = DataMetadata.txt
+		DDL.txt = DDL.txt
 		DDL_DML_CRUD.txt = DDL_DML_CRUD.txt
 		DML.txt = DML.txt
 	EndProjectSection
