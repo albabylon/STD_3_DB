@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Study_3_DB", "Study_3_DB\Study_3_DB.csproj", "{44432A8E-7F8D-4411-A5E7-D6AAFD12D5F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Study_3_DB", "Study_3_DB\Study_3_DB.csproj", "{44432A8E-7F8D-4411-A5E7-D6AAFD12D5F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelationModel", "RelationModel\RelationModel.csproj", "{0A666C8D-C058-4EEE-8CE8-35EF64A773CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelationModel", "RelationModel\RelationModel.csproj", "{0A666C8D-C058-4EEE-8CE8-35EF64A773CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NonrealationModel", "NonrealationModel\NonrealationModel.csproj", "{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonrealationModel", "NonrealationModel\NonrealationModel.csproj", "{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_RelationBD", "01_RelationBD", "{71DEFAB4-B113-49EF-8999-D885E1D90C7B}"
 EndProject
@@ -29,6 +29,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_DML_DDL_Transaction_DBDe
 		DML.txt = DML.txt
 		NormalFormDB.txt = NormalFormDB.txt
 		Transaction.txt = Transaction.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_AdvancedUseBD", "04_AdvancedUseBD", "{56C5625B-E56D-484C-A8EE-9F8DACAF1BB6}"
+	ProjectSection(SolutionItems) = preProject
+		Indexes.txt = Indexes.txt
 	EndProjectSection
 EndProject
 Global
@@ -56,5 +61,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0A666C8D-C058-4EEE-8CE8-35EF64A773CA} = {71DEFAB4-B113-49EF-8999-D885E1D90C7B}
 		{1718A7E9-047B-45C6-AF0B-B00EC15E7FC0} = {71DEFAB4-B113-49EF-8999-D885E1D90C7B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD1E5803-1A31-4D78-B1D7-970D7E837F7A}
 	EndGlobalSection
 EndGlobal
