@@ -117,3 +117,96 @@ END $$;
 DO $$ BEGIN RAISE NOTICE 'str = %', 
 gen_abra_cadabra(100);
 END $$;
+
+
+В примере вызывается функция, и результат её работы помещается в переменную txt. С помощью этой инструкции вы можете помещать и запрашивать данные из таблицы. 
+
+CREATE 
+OR REPLACE PROCEDURE just_print() AS $$ DECLARE txt TEXT;BEGIN 
+SELECT 
+  gen_abra_cadabra(35) INTO txt;
+RAISE NOTICE 'txt = %', 
+txt;
+END $$ LANGUAGE 'plpgsql';
+
+Например, если запрос возвращает единственное значение, то результат вы можете поместить в переменную:
+
+CREATE 
+OR REPLACE PROCEDURE get_Kuropatkin_phone() AS $$ DECLARE txt TEXT;BEGIN 
+SELECT 
+  phone 
+FROM 
+  clients 
+WHERE 
+  name = 'Куропаткин В В' INTO txt;
+RAISE NOTICE 'txt = %', 
+txt;
+END $$ LANGUAGE 'plpgsql';
+
+Если вы извлекаете целую строку из таблицы, то поместить её можно в переменную типа RECORD.
+Если при формировании строки что-то пойдёт не так и возникнет ошибка, 
+то она будет обработана с помощью инструкции EXCEPTION WHEN OTHERS THEN и вместо сообщения об ошибке будет напечатана строка “You made a mistake!”.
+
+CREATE 
+OR REPLACE FUNCTION print_client_data() RETURNS VOID AS $$ DECLARE client RECORD;
+BEGIN 
+SELECT 
+  * 
+FROM 
+  clients 
+WHERE 
+  name = 'Иван Владиморович К' INTO client;
+RAISE NOTICE 'Имя клиента = %, телефон = %', 
+client.name, 
+client.phone;
+EXCEPTION WHEN OTHERS THEN RAISE NOTICE 'You made a mistake!';
+END $$ LANGUAGE 'plpgsql';
+
+
+С помощью инструкции FOR … IN вы можете пройти по всем записям, которые возвращает запрос. 
+После ключевого слова FOR необходимо указать имя переменной, которая будет использоваться для итерации. 
+В нашей случае это переменная rec с типом RECORD. В конструкции IN вам необходимо указать запрос. Внутри блока LOOP объявляется тело цикла.
+
+DO $$ DECLARE rec RECORD;
+BEGIN FOR rec IN 
+SELECT 
+  id, 
+  name, 
+  phone 
+FROM 
+  clients 
+ORDER BY 
+  name DESC LOOP RAISE NOTICE 'id = %, name = %, phone = %', 
+  rec.id, 
+  rec.name, 
+  rec.phone;
+END LOOP;
+END $$;
+
+
+Для удаления процедуры или функции используется следующий синтаксис:
+
+DROP 
+  PROCEDURE имя_процедуры;
+DROP 
+  FUNCTION имя_функции;
+
+
+
+
+Добавьте в таблицу с заказами поле date_changed. Записывайте туда текущее время каждый раз, когда меняется значение какого либо поля в строке.
+
+Посмотреть ответ для самопроверки
+-- Добавляем поле date_changed
+ALTER TABLE orders ADD COLUMN date_changed TIMESTAMP;
+-- Создаём функцию
+CREATE OR REPLACE FUNCTION update_date_changed() RETURNS TRIGGER AS $$
+BEGIN
+   NEW.date_changed = now();
+   RETURN NEW;  
+END;
+$$ language 'plpgsql';
+-- Создаём построчный BEFORE триггер
+CREATE TRIGGER update_date_changed_triger
+BEFORE UPDATE ON orders
+FOR EACH ROW EXECUTE PROCEDURE update_date_changed();
