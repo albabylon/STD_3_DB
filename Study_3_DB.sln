@@ -35,10 +35,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_AdvancedUseBD", "04_Adva
 	ProjectSection(SolutionItems) = preProject
 		Indexes.txt = Indexes.txt
 		ProcedureAndFunction.txt = ProcedureAndFunction.txt
-		Triggers.txt = Triggers.txt
 		Subquery.txt = Subquery.txt
+		Triggers.txt = Triggers.txt
 		View.txt = View.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO.NET", "ADO.NET", "{F4F87D40-DF07-4D16-A22F-90E49307DE47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
