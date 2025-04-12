@@ -41,6 +41,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_AdvancedUseBD", "04_Adva
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ADO.NET", "ADO.NET", "{F4F87D40-DF07-4D16-A22F-90E49307DE47}"
+	ProjectSection(SolutionItems) = preProject
+		ADO.NET.txt = ADO.NET.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{A5AEF8D8-26DA-4CF0-9183-8EE6BF5D6C35}"
+	ProjectSection(SolutionItems) = preProject
+		Common.txt = Common.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

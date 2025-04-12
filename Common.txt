@@ -1,0 +1,6 @@
+Через ui DB Browser подключались к СУБД SQLite
+Через ui DBeaver подключались к СУБД PostgresSQL
+Через ui SQL Server Management Studio подключались к СУБД MS SQL Server (MSSQL)
+
+MySQL Server, PostgreSQL Server - это серверы БД
+БД создаются и управляются через СУБД
